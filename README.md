@@ -1,2 +1,3 @@
-# Rocketseat-NLW
-Repositorio para os projetos da Next Level Week
+# Rocketseat
+
+Repositorio para os projetos de Next Level Week, Cursos extras, etc... da plataforma Rocketseat
