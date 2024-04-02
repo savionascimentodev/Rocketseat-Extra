@@ -1,6 +1,6 @@
-import { View, Text } from "react-native"
+import { View, Text, Image } from "react-native"
 import { styles } from "./styles"
-import Ingredient from "@/components/Ingredients"
+import { Ingredients } from "@/components/Ingredients"
 
 export default function Index() {
   return (
@@ -13,7 +13,7 @@ export default function Index() {
         Descubra receitas baseadas nos produtos que você escolheu.
       </Text>
 
-      <Ingredient />
+      <Ingredients />
     </View>
   )
 }
