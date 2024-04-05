@@ -13,6 +13,8 @@ import { TableCell } from "./table/table-cell"
 import { TableRow } from "./table/table-row"
 import { ChangeEvent } from "react"
 import { attendees } from "../data/attendees"
+import { formatRelative } from "date-fns"
+import { ptBR } from "date-fns/locale"
 
 export function AttendeeList() {
   function onSearchInputChange(event: ChangeEvent<HTMLInputElement>) {
@@ -70,8 +72,16 @@ export function AttendeeList() {
                     <span>{attendee.email}</span>
                   </div>
                 </TableCell>
-                <TableCell>{attendee.createdAt.toISOString()}</TableCell>
-                <TableCell>{attendee.checkedInAt.toISOString()}</TableCell>
+                <TableCell>
+                  {formatRelative(attendee.createdAt, new Date(), {
+                    locale: ptBR
+                  })}
+                </TableCell>
+                <TableCell>
+                  {formatRelative(attendee.checkedInAt, new Date(), {
+                    locale: ptBR
+                  })}
+                </TableCell>
                 <TableCell>
                   <IconButton transparent>
                     <MoreHorizontal className="size-4" />
